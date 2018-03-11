@@ -1,0 +1,121 @@
+<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+        0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("9fe085e5d7822791fa4a9537f6443f3d");</script><!-- end Mixpanel -->
+
+<script type="application/javascript">
+
+    $(document).ready(function () {
+        $("#submitQuote").click(haveFun);
+    });
+
+    function haveFun() {
+
+        var quoteText;
+        var emailVal;
+        var distinctId;
+
+        quoteText = { quote: document.getElementById("quote").value };
+        emailVal = document.getElementById("emailBox").value;
+        distinctId = mixpanel.get_distinct_id();
+
+        if( emailVal != '' )
+        {
+            mixpanel.identify(emailVal.toString());
+            mixpanel.people.set({"$email": emailVal.toString() });
+            mixpanel.people.set({"$phone": '3034788122' });
+        }
+
+        mixpanel.track("Quote Submitted");
+
+        if(quoteText.quote != "") {
+
+            $.ajax({
+                type: 'Post',
+                url: '/brain_input',
+                data: quoteText,
+                traditional: true,
+                success: function (data) {
+                    //var jsonStr = JSON.stringify(data);
+                    document.getElementById("results").innerHTML = data.message;
+                    if (data.message.indexOf("!" != -1)) {
+                        $("#quote").val('');
+                        $("#results").animate({opacity: 1}, 2000);
+                    }
+                    mixpanel.track("Quote Success");
+                    setTimeout(hideResults, 4000);
+                },
+                error: function (xhr, data, message) {
+                    //var jsonStr = JSON.stringify(data);
+                    document.getElementById("results").innerHTML = data;
+                    $("#quote").animate({opacity: 1}, 2000);
+                    setTimeout(hideResults, 4000);
+                },
+                dataType: "json"
+            });
+        }
+        else
+        {
+            document.getElementById("badResults").innerHTML = 'Nice try, but that is a required field, Jeffrey';
+            $("#badResults").animate({opacity: 1}, 2000);
+            setTimeout(hideBadResults, 4000);
+        }
+    };
+
+    function emailBlur() {
+        setCookie( "emailVal", document.getElementById("emailBox").value )
+    };
+
+    function hideResults() {
+        $("#results").animate({ opacity: 0 }, 2000);
+    };
+
+    function hideBadResults()
+    {
+        $("#badResults").animate({ opacity: 0 }, 2000);
+    };
+
+    // Original JavaScript code by Chirp Internet: www.chirp.com.au
+    // Please acknowledge use of this code by including this header.
+
+    var today = new Date();
+    var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+
+    function setCookie(name, value)
+    {
+        document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+    };
+
+    function getCookie(){
+        return document.cookie.replace(/(?:(?:^|.*;\s*)emailVal\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    };
+
+</script>
+<div class="bodyContainer">
+
+    <div class="textContainer">
+        <h1>{{title}}</h1>
+        <h2>Stuff that in your brain and think it, Chuckles!!!</h2>
+        <p>Ever wish you could tell chuckles what to think?  Now you can.</p>
+        <p>Enter your word or phrase below and it will be stuffed into chuckles brain.</p>
+        <p>If it is appropriate for a murderous, horrible muffin to say, it will be approved.  And after that will be available for selection by mystic runes.</p>
+        <div>Your email (not required):</div>
+        <div><input type="text" id="emailBox" onblur="emailBlur();" ></div>
+        <div>Your quote:</div>
+        <div><textarea cols="30" rows="3" id="quote" required></textarea></div>
+        <div><input type="button" id="submitQuote" value="Think This, Buddy"></div>
+        <br />
+        <br />
+        <h2><div id="results" style="color: white; background-color: green; opacity: 0"></div></h2>
+        <h2><div id="badResults" style="color: white; background-color: red; opacity: 0"></div></h2>
+        <div></div>
+    </div>
+    <div class="imageContainer"><img width="500px" src="/images/BrainOfChuckles.png"></div>
+</div>
+
+
+<script>
+    if(field1 = getCookie("emailVal")) document.getElementById("emailBox").value = field1;
+</script>
+
+

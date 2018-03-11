@@ -1,0 +1,83 @@
+<div class="chatContainer">
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    <div id="app">
+        <div class="chatBubble">
+            <p class="triangle-isosceles" id="ChatBox">\{{ chucklesWordBarf }} </p>
+        </div>
+        <div>
+            <img class="chuckPick" id="ChuckPick" v-bind:src="chucklesPictureBarf" />
+        </div>
+        <div>
+            <span>\{{randomNumber}}</span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+    <input id="clickMe" type="button" value="Talk to me Chuckles" onclick="fun();" />
+
+    <br/>
+    <br/>
+    <div>Want to submit a Chuckles Chat to Chuckles Brain?  Visit the <a href="/brain">Brain</a> page.</div>
+
+    <script type="text/javascript">
+
+        const router = new VueRouter({
+            mode: 'history',
+            routes: [
+                { path: '/chuckleschat/:chatNumber' }
+            ]
+        })
+
+        var app1 = new Vue({
+            el: '#app',
+           router,
+            data: { chucklesWordBarf : 'I cant believe I hugged all those people.', chucklesPictureBarf : 'https://storage.googleapis.com/chucklesthedirtchipmuffin.com/ChatPix/ChucklesChat1.png' },
+            created: function () {
+                 this.fetchData();
+            },
+            watch: {
+                // call again the method if the route changes
+                '$route': 'fetchData'
+            },
+            methods: {
+                fetchData() {
+                    var chatNumber = this.$route.params.chatNumber;
+
+                    if(chatNumber)
+                    {
+
+                        $.get("/Chats/" + chatNumber, function (response) {
+                            data = response;
+                            app1.chucklesWordBarf = data.fortuneText;
+
+                        });
+
+                        var rand_num = getRandomIntInclusive(1, 21);
+
+                        var img_str = "https://storage.googleapis.com/chucklesthedirtchipmuffin.com/ChatPix/ChucklesChat" + rand_num + ".png";
+
+                        app1.chucklesPictureBarf = img_str;
+                    }
+                }
+            }
+        })
+
+        function fun() {
+
+            var data = "hello";
+            var chatNumber = getRandomIntInclusive(1,770);
+            router.push('/chuckleschat/' + chatNumber );
+
+        };
+
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+
+    </script>
+
+</div>

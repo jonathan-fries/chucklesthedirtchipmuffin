@@ -1,0 +1,11 @@
+<div class="bodyContainer">
+    <div class="textContainer">
+        <h1>{{{chapterTitle}}}</h1>
+        <h2>Chuckles the Dirt-Chip Muffin Book {{{bookId}}}, Chapter {{{chapterId}}}</h2>
+        <div>{{{chapterText}}}</div>
+        {{#if NotLastChapter}}
+            <p class="rightPageOrderNav" title="Next Chapter"><a id="frontBackNav" href="/book/{{{bookId}}}/chapter/{{{nextChapter}}}">Next Chapter<img src="/images/right.png"/></a>
+        {{/if}}
+    </div>
+    <div class="imageContainer"><img width="500px" src="{{{picture}}}"></div>
+</div>

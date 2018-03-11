@@ -1,0 +1,221 @@
+TRUE,Jiggling wires yields best result.,0.719880638
+TRUE,The pro-churn lobby will always want more butter.,0.091788135
+TRUE,Next time, if the web page asks you if you're an administrator, you say, ""Yes."",0.126227682
+TRUE,Beware of Weird Chicken Math,0.001885021
+TRUE,Just go ahead and shove all those wires behind the TV.,0.733663015
+TRUE,Is it still a win if I fell down in the parking lot?,0.866391718
+TRUE,"You can spell your name Mxyzptlk if you want to, but I'm still pronouncing the vowels.",0.030685021
+TRUE,I said you would be banned to the 5th dimension for a MINIMUM of 90 days. Read the fine print.,0.925629418
+TRUE,It's your prerogrative to name it 'Platypus' or 'Squirrel' or 'Monkey' if that is what you really want to do.,0.294881748
+TRUE,"Shiny, happy icons.",0.911267884
+TRUE,It's the chicken's day off.,0.638322268
+TRUE,Rutabaga,0.65990039
+TRUE,Always place the markers in the cup using the Upside Down Principle.,0.17086634
+TRUE,Please add Jazz Hands to the requirements document.,0.968870548
+TRUE,You will meet a man carrying a banjo.,0.891891917
+TRUE,It is likely that you will visit the municipal mulch pile.,0.261631382
+TRUE,The journey of a 1000 miles begins with packing a lunch.,0.930234527
+TRUE,"You are good enough, you are strong enough, and doggone it, people like you.",0.919224125
+TRUE,Looks like it's time to do the superior dance!,0.42192198
+TRUE,There are no numbers in a dream.,0.03026705
+TRUE,Your years as a jug band enthusiast will not go unrewarded.,0.655003779
+TRUE,Furnitues,0.665185744
+TRUE,All your code is self-documenting.  The rocks and stones themselves lift their voices in praise.,0.621871118
+TRUE,You can test that feature in a couple of ways, but if I were you I would try sitting on the keyboard first.,0.885445734
+TRUE,You will see a snail crawling on the edge of a straight razor.,0.357260121
+TRUE,Sandwich,0.057813776
+TRUE,Cattywampus,0.342346099
+TRUE,Quincunx,0.589954765
+TRUE,Eskimo,0.743131564
+TRUE,It's the kind of place where a man has to defend his chicken fingers.,0.645391654
+TRUE,You will overhear one crow speaking to another.,0.418321634
+TRUE,The pro-churn lobby will always advocate for musical chairs.,0.368286401
+TRUE,Turn west in East St. Louis.,0.269861945
+TRUE,Quesadilla,0.012619355
+TRUE,Magic Beans,0.096368406
+TRUE,Hot Sauce,0.971921882
+TRUE,Snack Bar,0.5831715
+TRUE,Daylight Shuffle Time,0.406629086
+TRUE,Beware of anachronistic camels.,0.684038717
+TRUE,Your reward will be a grove of rubies.,0.552389076
+TRUE,The pro-churn lobby doesn't really care if the drink is shaken or stirred as long as it is agitated in some fashion.,0.724031844
+TRUE,This voucher entitles you to two free meetings.,0.044345657
+TRUE,Don't bother labeling that button, I'm sure we'll all remember what it does.,0.284668023
+TRUE,The pro-churn lobby says that more than 7 shuffles is just fine too, there isn't a maximum on 'proper mixing'.,0.620260469
+TRUE,The pro-churn lobby is also OK with their drink being both shaken AND stirred.,0.812121621
+TRUE,Thimble,0.878576125
+TRUE,Your search for a career track that culminates in the job title 'Person of Leisure' continues.,0.23684111
+TRUE,Reverse Polish Alphabetical Order,0.394793419
+TRUE,A bunch of zero byte files.,0.500942093
+TRUE,Many happies. No sads.,0.882608979
+TRUE,Put it in the munger and see what happens.,0.759503386
+TRUE,Marco,0.079257007
+TRUE,Exclamation Point,0.953264721
+TRUE,Hoopla!,0.43589012
+TRUE,These lightbulbs are too French.,0.901776494
+TRUE,These lightbulbs are very German.  Wunderbar!,0.708007014
+TRUE,Smorgasbord,0.390471981
+TRUE,A grilled cheese tastes better than a salad.,0.01089448
+TRUE,Infinite Unicorns,0.088576041
+TRUE,Chunk-style Chicken,0.790916853
+TRUE,It's code all the way down.,0.664632223
+TRUE,You will aquire an egg beater.,0.084179298
+TRUE,You will arrive on foot by way of the coast road.,0.731260982
+TRUE,Schwa,0.634657978
+TRUE,"Oh, maybe you were talking about Canadian Thanksgiving.",0.72442163
+TRUE,I said NULL and I meant NULL.,0.400402541
+TRUE,You don't need a funnel cake that badly.,0.362650871
+TRUE,Beware of $1 icons.,0.64569891
+TRUE,"It's a color wheel, not a 'what colors do you hate' wheel.",0.459421018
+TRUE,"Congratulations SpongeBob, you've been promoted.",0.936289333
+TRUE,"Cowboy boots are acceptable, as long as they are in a plain style.  ",0.04143158
+TRUE,But I like grids.  Grids are cool.  That grid belonged to my mother.,0.032453172
+TRUE,Extremely Creative Rectangles,0.378886301
+TRUE,You are passing through the brain cloud.,0.31717664
+TRUE,Medical-Grade Pop Rocks,0.156546594
+TRUE,Spell check told me to do it.,0.769225977
+TRUE,How many days in metric February?,0.073512924
+TRUE,Hamburger,0.466244615
+TRUE,Cheeseburger,0.884233567
+TRUE,Boing,0.993849673
+TRUE,"Thank you, but we already have a verb of that.",0.982069786
+TRUE,A vast legacy of stubbed wiki pages,0.746953021
+TRUE,I made NAME all caps because I knew it would please you.,0.154393735
+TRUE,Bog,0.121765077
+TRUE,Oink,0.414348505
+TRUE,Please consider a Zombie setting of Absolutely No Zombies,0.155273474
+TRUE,"He's not an annoying bear, he's a very enthusiastic bear who likes mornings.",0.280075565
+TRUE,Reginald,0.734773439
+TRUE,Electric Boogaloo,0.224613525
+TRUE,Origami Boulder,0.287673515
+TRUE,Giant Orange Whale,0.564814158
+TRUE,There is nothing more efficient than 0 bytes free.,0.111845884
+TRUE,A pointer by any other name is still a pointer.,0.267100152
+TRUE,Belle of the ball,0.04130372
+TRUE,Code is the Document,0.409071843
+TRUE,Your employee ID has been hard-coded into the stored procedure.,0.676668315
+TRUE,The Revolving Doors of Perception,0.50602805
+TRUE,Babylonian Vanilla,0.750886422
+TRUE,Tour Bus Riot,0.402908834
+TRUE,You will receive a surfeit of favicon search results.,0.247004926
+TRUE,"I am a very positive person.  I invented the half-bit data type.  The only value it can have is 'Yes'.  Also, it can be null, but don't get me started.",0.960176125
+TRUE,Someday I will export all these fortunes into a CSV file.  And then I'll prove my parents wrong.,0.380910786
+TRUE,I am perfect.  Galaga told me so.,0.486704042
+TRUE,This game is called Windows Update.  It's not very fun and I always lose.,0.59672131
+TRUE,Donkey Kong is better than Windows.,0.691236474
+TRUE,I can put semi-colons in it.  Is that really what you want to happen?,0.132668246
+TRUE,I am using a soft keyboard on a non-touch screen device.  How do I make shift+alt+ctl+windows+a equal a?,0.958478213
+TRUE,Pursued off a cliff by badgers.,0.668449335
+TRUE,If you find yourself looking for white-out you should probably ask yourself what problem you are trying to solve.,0.858998476
+TRUE,My fan should never, never turn on because I visit your website.,0.536025954
+TRUE,Frogs with Teeth,0.361151777
+TRUE,You cannot alter the column widths!,0.021340241
+TRUE,What is the proper spelling of meeses?  A. Meeses B. Meeces C. Mieces D. All of the Above,0.769712152
+TRUE,OK, who is the most Swiss looking here today?,0.942139317
+TRUE,type-ahead-o,0.703001908
+TRUE,If your entire life is going to be condensed into a bar code, make sure it is a 2D barcode.,0.795987963
+TRUE,Tool Tip Overload,0.730522479
+TRUE,Judge a man not by the quality of his hold music.,0.270834812
+TRUE,Somebody hacked your account and set it to Canadian.,0.950248317
+TRUE,You will attend many legitimate business meetings.,0.95179493
+TRUE,Dead guy in a box.  IN A BOX!,0.410969524
+TRUE,Grand Duchy of Randall,0.303538214
+TRUE,I was talking about the other Matt with two t's.,0.383091426
+TRUE,This design makes me 73% happy.,0.53620376
+TRUE,"So I made it have orange text on an orange background, what's wrong with that?",0.783646762
+TRUE,Double Infinite Unicorns,0.091871975
+TRUE,Welcome to Plutonium Team!  It's your first day.   Sorry, you died.,0.734491961
+TRUE,Fishermans!,0.525072087
+TRUE,You will receive a shiny rodeo belt buckle.,0.696655065
+TRUE,Approximately metric,0.571735487
+TRUE,Dave says: no miracles.,0.747949161
+TRUE,We both have a dozen donuts.  I give you one.  Is that a math problem or something else?,0.454497158
+TRUE,Fly away little texty!  Fly away home!,0.569740995
+TRUE,Polo,0.114495644
+TRUE,I know it is your birthday, but I still don't care for that Easter egg.  What does 'Orange Power' even mean?,0.772514452
+TRUE,I think this bar code has become self-aware.,0.998183849
+TRUE,Standard Triangle Language,0.852729705
+TRUE,Get a stick.  Use stick to catch ants.  Eat ants for lunch.,0.967148319
+TRUE,Yellow Crazy Ants ate my homework.,0.307391014
+TRUE,Why wouldn't it be OK for my child to see a pediatrician named Dr. Mario?,0.013415405
+TRUE,Don't science my visuals.,0.573695469
+TRUE,Get off my lawn.,0.307526099
+TRUE,No, I'm not personally 'in beta'.,0.490531956
+TRUE,Aleph-naught Unicorns,0.465270203
+TRUE,Aleph-one Unicorns,0.043670919
+TRUE,Boog,0.944533021
+TRUE,I have a black belt in violin.,0.019341384
+TRUE,If I didn't know this was hasenpfeffer, I'd swear it was carrots!,0.348288382
+TRUE,You are willing to eat expired mustard, but not expired salad dressing.,0.2253749
+TRUE,You will receive many feedbacks.,0.263589038
+TRUE,What are you doing to my pancakes?!,0.142197173
+TRUE,Corduroy Mammoth,0.240683286
+TRUE,"I'm enjoying the crime and the poverty, but it's just not cold enough.",0.335486392
+TRUE,Inquiring minds want to know.,0.367750109
+TRUE,Borf,0.832308118
+TRUE,Goom,0.440533537
+TRUE,Clark,0.416090886
+TRUE,Peg,0.95200624
+TRUE,Dried tubers,0.249413574
+TRUE,Shmip,0.003462472
+TRUE,Shmup,0.533818765
+TRUE,Gar,0.846227802
+TRUE,North Korean Hubcaps,0.156009188
+TRUE,Mongolian Death Worm,0.79716914
+TRUE,"Are Canada Geese making your life miserable? Are they destroying your grass, leaving horrible amounts of droppings and feathers, chasing visitors and clients? Yes.  Yes they are.",0.175117128
+TRUE,The problem with speech to text is that Google always looks for 'Chard' when what I am asking about is 'CHUDs'.,0.805554437
+TRUE,The opposite of cow is negative cow.,0.683042174
+TRUE,I call this one the sky comma.,0.676280733
+TRUE,Unregulated, unlimited orange juice pulp.,0.134413386
+TRUE,It takes a while because one part of Google has to tell another part of Google where my mail is supposed to go.,0.64716783
+TRUE,Welcome to Bamboo Café, the home of $5 Toast!,0.154194
+TRUE,Is it some kind of a problem if I made the password SnugglyWumpkins123?,0.689268108
+TRUE,When creating a new password I use the messages from outer space that I receive in my dental fillings.  That feels like the most secure way to me.,0.127645512
+TRUE,I'm very mad that you think that's a tangerine, when it is clearly an orange.,0.415145546
+TRUE,You've won a taco.,0.095949458
+TRUE,You've won many tacos.,0.858958429
+TRUE,We're going to connect the engine throttle to your radio volume nob and your radio volume to the gas pedal.  That should fix your problem.,0.946447486
+TRUE,User-generated type-o's,0.618279205
+TRUE,"User-generated mistakes ... wait, I meant 'content', yes 'content'",0.742409438
+TRUE,"Frowny Face, Frowny Face, Rain Cloud",0.608057722
+TRUE,Full Boat: Rain Clouds Over Frowny Faces,0.591924274
+TRUE,Full Boat: Smileys over Unicorns,0.187407319
+TRUE,Double Frowny Face, Half Rain Cloud Plus Negative Unicorn,0.629386259
+TRUE,Double Smiley, Double Sunshine,0.565468772
+TRUE,Half Smiley, Full Sunshine,0.352582132
+TRUE,Full Smiley, Half Sunshine,0.224478518
+TRUE,Text-Based Emoji Equivalent,0.332180303
+TRUE,Smiley, Sunshine, Regular Unicorn,0.149388756
+TRUE,The opposite of cow is negative cow.,0.87673719
+TRUE,The opposite of unicorn is negative unicorn.,0.295171023
+TRUE,The opposite of smiley is frowny.,0.90210866
+TRUE,The opposite of sunny is rain cloud.,0.158328505
+TRUE,I'd like a BLT.  Hold the B, and the L, and the T.   Also, hold the bread and add sprouts.,0.496034562
+TRUE,I know that one of these buttons means comment out all this terrible code I wrote.  But I'm not sure which button it is.  Can you help me?,0.668402441
+TRUE,Your bot won't pass a Turing test unless it tries to sell the human evaluator a commemorative T-shirt.,0.745233127
+TRUE,60 Foot Peep,0.689341002
+TRUE,I make no apologies for the prevalence of unicorns in this document.,0.503580782
+TRUE,Blasé face, rain cloud, very expensive unicorn,0.062532587
+TRUE,Frowny Face, Triple Rain Cloud, Aloof Unicorn,0.828626843
+TRUE,You will feel vibrant/alive.,0.986159303
+TRUE,Yes, but do you feel vibrant/alive?,0.898943018
+TRUE,If it won't fit it on one wall, put it on two walls.,0.735928385
+TRUE,Algebra,0.272519148
+TRUE,Greg Gary Allen Dude,0.553947009
+TRUE,I just deleted your refund.,0.842006081
+TRUE,I'm afraid it is time to invoke the guacamole clause.,0.770100638
+TRUE,Big Boy doesn't like you.,0.802672221
+TRUE,It does still count as a win, even if I did spill the guacamole.,0.576019846
+TRUE,Big Boy does like you.,0.24131442
+TRUE,I don't like your optimism.,0.719010164
+TRUE,We opened his keyboard and found Duracell batteries inside of it.,0.732191289
+TRUE,A small stone can cast a great shadow,0.841421859
+TRUE,Alphabetacular Order,0.481315534
+TRUE,I don't care if it is an accordion with paging or a paged grid with accordions inside of it.,0.304373648
+TRUE,I need a case for deep breathing.,0.631882208
+TRUE,You can have cat food or books but not both.,0.351150958
+TRUE,Yes, you are making a choice between dumb people and hungry cats.,0.456388865
+TRUE,I'm being followed by a moon chicken, moon chicken, moon chicken.,0.268630895
+TRUE,I make no apologies for the prevalence of unicorns in this document.,0.937427662
+TRUE,Is Bon Jovi one guy or two?,0.370816333
+TRUE,If I extend this to its logical conclusion it means that a user is a network peripheral.,0.496385701

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hank, Lance, and Jonathan Fries">
+    <title>Chuckles Chat</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function fun() {
+            var data = "hello";
+            $.get("/Chats", function (response) {
+                data = response;
+                $("#ChatBox").text(data.fortuneText)
+            });
+
+            //    .error(function () {
+            //    alert("Sorry could not proceed");
+            //});
+
+
+
+        };
+
+    </script>
+</head>
+<body>
+<div id="header">
+    <div id="yeOldTopNav" class="topNav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/TheChob.html">Chob</a></li>
+            <li><a href="/ChucklesChat.html">Chuckles Chat</a></li>
+        </ul>
+    </div>
+    <!--    <div id="logo">
+            <img src="/public/images/logo.png">
+        </div>-->
+</div>
+
+<div style="width: 500px"><p class="triangle-isosceles" id="ChatBox">I can't believe I hugged all those people.</p></div>
+<div><img src="../public/images/ChucklesTwo.png"</div>
+<div style="clear: both"></div>
+<input id="clickMe" type="button" value="Get Another Message" onclick="fun();" />
+<div id="footer">
+    <div id="footerText">© 2016 by Hank, Lance, and Jonathan Fries</div>
+</div>
+</body>
+</html>

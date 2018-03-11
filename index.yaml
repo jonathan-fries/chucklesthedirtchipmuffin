@@ -1,0 +1,7 @@
+indexes:
+- kind: ChucklesQuotes
+  properties:
+  - name: QuoteText
+    direction: asc
+  - name: Active
+    direction: asc

@@ -1,0 +1,30 @@
+<script>
+    function myFunction() {
+        var x = document.getElementById("yeOldTopNav");
+        if (x.className === "topNav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topNav";
+        }
+    }
+</script>
+
+<div id="header">
+    <div id="yeOldTopNav" class="topNav">
+        <ul>
+            <li class="icon">
+                <a href="javascript:void(0);" onclick="myFunction()" class="icon"><img src="/images/navicon_small.png" /></a>
+            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/thechob">The Chob</a></li>
+            <li><a href="/chuckles">Chuckles</a></li>
+            <li><a href="/chuckleschat">Chuckles Chat</a></li>
+            <li><a href="/book/1/chapter/1">Book 1</a></li>
+            <li><a href="/book/2/chapter/1">Book 2</a></li>
+            <li><a href="/highfreaktosepower">High Freaktose Power!</a></li>
+        </ul>
+    </div>
+    <!--    <div id="logo">
+            <img src="/public/images/logo.png">
+        </div>-->
+</div>
