@@ -26,7 +26,7 @@ ds.namespace = 'Chuckles';
 //router.get('/', PostOrGet(req, res, next));
 router.post('/', function(req, res, next) {
 
-    var id_number = getRandomIntInclusive(1, 770);
+    var id_number = getRandomIntInclusive(1, 840);
 
     var query = ds.createQuery(['ChucklesQuotes'])
         .filter('ListNumber', '=', id_number)
