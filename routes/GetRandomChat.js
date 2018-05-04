@@ -24,7 +24,12 @@ ds.namespace = 'Chuckles';
 
 /* GET users listing. */
 //router.get('/', PostOrGet(req, res, next));
-router.post('/', function(req, res, next) {
+router.post('/', InternalGetRandomChat);
+router.get( '/', InternalGetRandomChat);
+
+module.exports = router;
+
+function InternalGetRandomChat( req, res, next ) {
 
     var id_number = getRandomIntInclusive(1, 840);
 
@@ -56,11 +61,11 @@ router.post('/', function(req, res, next) {
     var fortuneObj = {'speech' : fortune, 'displayText' : fortune, 'data' :
         {
             "google": {
-            "expect_user_response": false,
-            "is_ssml": false,
-            "permissions_request": {}
-        }
-    }, 'contextOut' : [], source: 'ChucklesChat' };
+                "expect_user_response": false,
+                "is_ssml": false,
+                "permissions_request": {}
+            }
+        }, 'contextOut' : [], source: 'ChucklesChat' };
 
     //var fortuneObj = { "messages": [
     //    {
@@ -72,8 +77,6 @@ router.post('/', function(req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     res.send(fortuneObj);
 
-    });
-
 });
 
-module.exports = router;
+}
