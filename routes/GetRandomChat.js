@@ -81,11 +81,11 @@ function formatForGoogle(fortune)
     return  fortuneObj = {'speech' : fortune, 'displayText' : fortune, 'data' :
         {
             "google": {
-                "expect_user_response": false,
+                "expect_user_response": true,
                 "is_ssml": false,
                 "permissions_request": {}
             }
-        }, 'contextOut' : [], source: 'ChucklesChat' };
+        }, 'contextOut' : [], source: 'ChucklesChat', followupEvent : {} };
 }
 
 function sendGoogleResponse(fortuneObj, res)
