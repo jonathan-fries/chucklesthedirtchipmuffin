@@ -4,53 +4,26 @@
 
 var express = require('express');
 var router = express.Router();
-const Datastore = require('@google-cloud/datastore');
-
-//const config = require('../config');
-
-// Instantiates a client
-const ds = Datastore(
-    //{projectId: config.get('GCLOUD_PROJECT')}
-    {projectId: 'chucklesthedirtchipmuffin'}
-);
-
-ds.namespace = 'Chuckles';
+var getFortune = require('./getFortune');
 
 /* GET users listing. */
 router.get('/:id', function(req, res, next) {
 
     var id_number = parseInt(req.params.id);
 
-    var query = ds.createQuery(['ChucklesQuotes'])
-        .filter('ListNumber', '=', id_number)
-        .limit(1);
-
-    ds.runQuery(query, (err, entities, nextQuery) => {
-        if (err) {
-            console.log(err);
-            return;
-        }
-
-    var fortune;
-
-    if(entities.length > 0 )
+    if(global.poke)
     {
-        fortune = entities[0].QuoteText;
-
-        console.log(fortune);
-
+        global.poke = false;
+        var fortuneObj = {'fortuneText' : 'Stop poking me Jeffrey!  I mean it!' };
+        res.send(fortuneObj);
     }
     else
     {
-        fortune = 'You broke the server, bozo!  You got toast crumbs in the default credentials and sauerkraut in the munger.';
-
+        getFortune.retrieve(id_number, function(fortune){
+            var fortuneObj = {'fortuneText' : fortune };
+            res.send(fortuneObj);
+        });
     }
-
-    var fortuneObj = {'fortuneText' : fortune };
-
-    res.send(fortuneObj);
-
-    });
 
 });
 

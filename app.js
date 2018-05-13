@@ -15,6 +15,9 @@ var brain_input = require('./routes/brain_input');
 var highfreaktosepower = require('./routes/highfreaktosepower');
 var chuckles = require('./routes/chuckles');
 var GetRandomChat = require('./routes/GetRandomChat');
+var poke = require('./routes/poke');
+
+global.poke = false;
 
 var app = express();
 var exphbs  = require('express-handlebars');
@@ -57,6 +60,7 @@ app.use('/brain_input', brain_input);
 app.use('/highfreaktosepower', highfreaktosepower);
 app.use('/chuckles', chuckles );
 app.use('/getrandomchat', GetRandomChat);
+app.use('/poke', poke);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
