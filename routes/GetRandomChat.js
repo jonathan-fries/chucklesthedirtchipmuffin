@@ -4,23 +4,18 @@
 
 var express = require('express');
 var router = express.Router();
-const Datastore = require('@google-cloud/datastore');
+var getFortune = require('./getFortune');
+//const Datastore = require('@google-cloud/datastore');
 
 //const config = require('../config');
 
 // Instantiates a client
-const ds = Datastore(
+//const ds = Datastore(
     //{projectId: config.get('GCLOUD_PROJECT')}
-    {projectId: 'chucklesthedirtchipmuffin'}
-);
+    //{projectId: 'chucklesthedirtchipmuffin'}
+//);
 
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
-ds.namespace = 'Chuckles';
+//ds.namespace = 'Chuckles';
 
 /* GET users listing. */
 //router.get('/', PostOrGet(req, res, next));
@@ -33,32 +28,57 @@ function InternalGetRandomChat( req, res, next ) {
 
     var id_number = getRandomIntInclusive(1, 840);
 
-    var query = ds.createQuery(['ChucklesQuotes'])
-        .filter('ListNumber', '=', id_number)
-        .limit(1);
+//    var query = ds.createQuery(['ChucklesQuotes'])
+//        .filter('ListNumber', '=', id_number)
+//        .limit(1);
 
-    ds.runQuery(query, (err, entities, nextQuery) => {
-        if (err) {
-            console.log(err);
-            return;
-        }
+//    var fortune;
 
-        var fortune;
-
-    if(entities.length > 0 )
+    if( global.poke )
     {
-        fortune = entities[0].QuoteText;
-
-        console.log(fortune);
-
+        global.poke = false;
+        fortune = "Quit poking me Jeffrey!"
+        var fortuneObj = formatForGoogle(fortune);
+        sendGoogleResponse(fortuneObj, res);
     }
-    else
-    {
-        fortune = 'You broke the server, bozo!  You got toast crumbs in the default credentials and sauerkraut in the munger.';
+    else {
 
+        getFortune.retrieve(id_number, function(fortune){
+            var fortuneObj = formatForGoogle(fortune);
+            sendGoogleResponse(fortuneObj, res)
+        });
+
+        //ds.runQuery(query, (err, entities, nextQuery) => {
+        //    if(err) {
+        //        console.log(err);
+        //        return;
+        //    }
+
+        //    if(entities.length > 0
+    //)
+        //{
+        //    fortune = entities[0].QuoteText;
+
+        //    console.log(fortune);
+        //}
+    //else
+        //{
+          //  fortune = 'You broke the server, bozo!  You got toast crumbs in the default credentials and sauerkraut in the munger.';
+
+        //}
+
+        //var fortuneObj = formatForGoogle(fortune);
+
+        //sendGoogleResponse(fortuneObj, res);
+
+        //});
     }
 
-    var fortuneObj = {'speech' : fortune, 'displayText' : fortune, 'data' :
+}
+
+function formatForGoogle(fortune)
+{
+    return  fortuneObj = {'speech' : fortune, 'displayText' : fortune, 'data' :
         {
             "google": {
                 "expect_user_response": false,
@@ -66,17 +86,16 @@ function InternalGetRandomChat( req, res, next ) {
                 "permissions_request": {}
             }
         }, 'contextOut' : [], source: 'ChucklesChat' };
+}
 
-    //var fortuneObj = { "messages": [
-    //    {
-    //        "speech": fortune ,
-    //        "type": 0
-    //    }
-    //]};
-
+function sendGoogleResponse(fortuneObj, res)
+{
     res.setHeader('Content-Type', 'application/json');
     res.send(fortuneObj);
-
-});
-
 }
+
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
