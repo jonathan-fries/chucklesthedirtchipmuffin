@@ -4,7 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var getMaxChat = require('./utilities/getMaxChat');
 
+//routes
 var index = require('./routes/index');
 var thechob = require('./routes/thechob');
 var chats = require('./routes/chats');
@@ -16,8 +18,21 @@ var highfreaktosepower = require('./routes/highfreaktosepower');
 var chuckles = require('./routes/chuckles');
 var GetRandomChat = require('./routes/GetRandomChat');
 var poke = require('./routes/poke');
+var resetMaxChats = require('./routes/resetMaxChats');
+
 
 global.poke = false;
+var err;
+getMaxChat.retrieve( err, function() {
+
+    if(err)
+    {
+        console.log('Error received setting maxChat:' + err);
+    }
+    else{
+        console.log('Confirmed retrieval of maxChat from storage.  Value = ' + global.maxChat );
+    }
+});
 
 var app = express();
 var exphbs  = require('express-handlebars');
@@ -61,11 +76,13 @@ app.use('/highfreaktosepower', highfreaktosepower);
 app.use('/chuckles', chuckles );
 app.use('/getrandomchat', GetRandomChat);
 app.use('/poke', poke);
+app.use('/resetmaxchats', resetMaxChats);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
+  console.log('Throwing 404 - resource not found.');
   next(err);
 });
 

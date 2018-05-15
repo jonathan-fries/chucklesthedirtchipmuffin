@@ -9,6 +9,7 @@ router.get('/:id*?', function(req, res, next) {
     res.render('chuckleschat', {
         title: 'Chuckles Chat',
         NeedsJquery: 'true',
+        maxChat: global.maxChat,
     });
 });
 
