@@ -30,12 +30,21 @@ describe('getFortune', function() {
 });
 
 describe('simple alt http test', function(){
-    it( 'Respond with OK', function(done){
+    it( '/ responds with OK', function(done){
         var server;
         server = require('../app');
-        request(server).get('/').expect(200, done);
+        request(server).get('/')
+            .expect(200)
+            .expect(function(res) {
+                if(!(res.text.indexOf('jellyfish') > -1))
+                {
+                    throw new Error("jellyfish");
+                    console.log(res.text);
+                }
+            })
+            .end(done);
     });
-    it( 'Respond with OK', function(done){
+    it( '/poke responds with OK', function(done){
         var server;
         server = require('../app');
         request(server).get('/poke')
@@ -43,6 +52,81 @@ describe('simple alt http test', function(){
             .expect('OK', done);
 
     });
+    it( '/GetRandomChat responds with OK', function(done){
+        var server;
+        server = require('../app');
+        request(server).get('/poke')
+            .expect(200, done);
+
+    });
+    it( '/resetmaxchats responds with OK', function(done){
+        var server;
+        server = require('../app');
+        request(server).get('/resetmaxchats')
+            .expect(200, done);
+
+    });
+    it( '/thechob responds with OK', function(done){
+        var server;
+        server = require('../app');
+        request(server).get('/thechob')
+            .expect(200)
+            .expect(function(res) {
+                if(!(res.text.indexOf('gob') > -1))
+                {
+                    throw new Error("gob");
+                    console.log(res.text);
+                }
+            })
+            .end(done);
+
+
+    });
+    it( '/chuckles responds with OK', function(done){
+        var server;
+        server = require('../app');
+        request(server).get('/chuckles')
+            .expect(200, done);
+
+    });
+    it( '/chuckleschat responds with OK', function(done){
+        var server;
+        server = require('../app');
+        request(server).get('/chuckleschat')
+            .expect(200, done)
+            .expect(function(res) {
+                if(!(res.text.indexOf('hug') > -1))
+                {
+                    throw new Error("Page text invalid.");
+                    console.log(res.text);
+                }
+            })
+            .end(done);
+
+    });
+    it( '/highfreaktosepower responds with OK', function(done){
+        var server;
+        server = require('../app');
+        request(server).get('/highfreaktosepower')
+            .expect(200, done);
+    });
+    it( '/book/1/chapter/1 responds with OK', function(done){
+        var server;
+        server = require('../app');
+        request(server).get('/book/1/chapter/1')
+            .expect(200)
+            .expect(function(res) {
+                if(!(res.text.indexOf('Once upon a time') > -1))
+                {
+                    throw new Error("Page text invalid.");
+                    console.log(res.text);
+                }
+        })
+            .end(done);
+
+    });
+
+
     it( 'Check 404', function(done){
         var server;
         server = require('../app');
@@ -62,28 +146,6 @@ describe('simple alt http test', function(){
         server = require('../app');
         request(server).get('/chats/735')
             .expect(200, {"fortuneText":"The opposite of french fries is emotional platypus."}, done);
-
     });
-});
 
-// describe('loading express', function () {
-//     var server;
-//     beforeEach(function () {
-//         server = require1('../bin/www', { bustCache: true });
-//     });
-//     afterEach(function (done) {
-//         server.close(done);
-//     });
-//     it('responds to /', function testSlash(done) {
-//         //request.Test(server, '/').expect(200, done);
-//         superRequest(server)
-//             .get('/')
-//             .expect(200, done);
-//     });
-//     it('404 everything else', function testPath(done) {
-//         console.log('test 404');
-//         superRequest(server)
-//             .get('/foo/bar')
-//             .expect(404, done);
-//     });
-// });
+});
