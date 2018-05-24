@@ -1,7 +1,7 @@
 const Datastore = require('@google-cloud/datastore');
 var pathToRegexp = require('path-to-regexp');
 
-process.env.GOOGLE_APPLICATION_CREDENTIALS = 'ChucklesTheDirtChipMuffin-8d8ef031ee52.json'
+//process.env.GOOGLE_APPLICATION_CREDENTIALS = 'ChucklesTheDirtChipMuffin-8d8ef031ee52.json'
 
 // Instantiates a client
 const ds = Datastore(
