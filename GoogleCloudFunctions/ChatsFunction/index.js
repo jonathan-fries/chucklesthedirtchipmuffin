@@ -1,7 +1,7 @@
 const Datastore = require('@google-cloud/datastore');
 var pathToRegexp = require('path-to-regexp');
 
-//process.env.GOOGLE_APPLICATION_CREDENTIALS = 'ChucklesTheDirtChipMuffin-8d8ef031ee52.json'
+process.env.GOOGLE_APPLICATION_CREDENTIALS = 'ChucklesTheDirtChipMuffin-8d8ef031ee52.json'
 
 // Instantiates a client
 const ds = Datastore(
@@ -14,6 +14,15 @@ exports.getChat = (req, res) => {
 
     var re = pathToRegexp('/:id');
     var tokens = re.exec(req.path);
+
+    console.log("Setting access control for public internet");
+    var allowedOrigins = ['http://chucklesthedirtchipmuffin.com', 'https://chucklesthedirtchipmuffin.com', 'http://127.0.0.1', 'http://localhost', 'http://localhost:5000'];
+    var origin = req.headers.origin;
+    if(allowedOrigins.indexOf(origin) > -1) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+    //res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
 
     console.log(tokens[0].toString());
 
@@ -44,27 +53,6 @@ exports.getChat = (req, res) => {
             fortune = 'You broke the server, bozo!  You got toast crumbs in the default credentials and sauerkraut in the munger.';
 
         }
-
-        if(req.hostname == 'localhost' )
-        {
-            console.log("Setting access control for localhost");
-            var allowedOrigins = ['http://127.0.0.1', 'http://localhost', 'http://localhost:5000'];
-            var origin = req.headers.origin;
-            if(allowedOrigins.indexOf(origin) > -1) {
-                res.setHeader('Access-Control-Allow-Origin', origin);
-            }
-        }
-        else
-        {
-            console.log("Setting access control for public internet");
-            var allowedOrigins = ['http://chucklesthedirtchipmuffin.com', 'https://chucklesthedirtchipmuffin.com'];
-            var origin = req.headers.origin;
-            if(allowedOrigins.indexOf(origin) > -1) {
-                res.setHeader('Access-Control-Allow-Origin', origin);
-            }
-        }
-
-        res.set('Access-Control-Allow-Methods', 'GET');
 
         var fortuneObj = {'fortuneText' : fortune };
         res.send(fortuneObj);
