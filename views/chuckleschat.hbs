@@ -48,7 +48,7 @@
                     if(chatNumber)
                     {
 
-                        $.get("http://localhost:8010/chucklesthedirtchipmuffin/us-central1/getChat/" + chatNumber, function (response) {
+                        $.get("https://us-central1-chucklesthedirtchipmuffin.cloudfunctions.net/chats/" + chatNumber, function (response) {
                             data = response;
                             app1.chucklesWordBarf = data.fortuneText;
 
