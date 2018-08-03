@@ -1,0 +1,8 @@
+{
+  "name": "ChatsFunction",
+  "version": "0.0.1",
+  "dependencies": {
+    "path-to-regexp": "2.2.1",
+    "@google-cloud/datastore": "1.4.0"
+  }
+}
