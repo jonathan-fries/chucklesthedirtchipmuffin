@@ -20,7 +20,8 @@
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
     "lodash": ">=4.17.13",
-    "cryptiles": ">=4.1.2"
+    "cryptiles": ">=4.1.2",
+    "fresh": ">=0.5.2"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
