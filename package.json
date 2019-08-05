@@ -22,7 +22,13 @@
     "lodash": ">=4.17.13",
     "cryptiles": ">=4.1.2",
     "fresh": ">=0.5.2",
-    "sshpk": ">=1.13.2"
+    "sshpk": ">=1.13.2",
+    "extend": ">=3.0.2",
+    "stringstream": ">=0.0.6",
+    "morgan": ">=1.9.1",
+    "node.extend": ">=2.0.1",
+    "debug": ">=2.6.9",
+    "protobufjs": ">=5.0.3"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
