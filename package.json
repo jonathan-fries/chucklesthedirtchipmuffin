@@ -18,7 +18,8 @@
     "hbs": "^4.0.4",
     "less-middleware": "~2.2.0",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "lodash": ">=4.17.13"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
