@@ -7,6 +7,7 @@
     "lodash": ">=4.17.13",
     "lodash.merge": ">=4.6.2",
     "axios": ">=0.18.1",
-    "cryptiles": ">=4.1.2"
+    "cryptiles": ">=4.1.2",
+    "extend": ">=3.0.2"
   }
 }
