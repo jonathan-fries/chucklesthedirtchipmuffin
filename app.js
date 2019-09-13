@@ -17,6 +17,7 @@ var brain_input = require('./routes/brain_input');
 var highfreaktosepower = require('./routes/highfreaktosepower');
 var chuckles = require('./routes/chuckles');
 var GetRandomChat = require('./routes/GetRandomChat');
+var getrandomchatv2 = require('./routes/GetRandomChatv2');
 var poke = require('./routes/poke');
 var resetMaxChats = require('./routes/resetMaxChats');
 
@@ -75,6 +76,7 @@ app.use('/brain_input', brain_input);
 app.use('/highfreaktosepower', highfreaktosepower);
 app.use('/chuckles', chuckles );
 app.use('/getrandomchat', GetRandomChat);
+app.use('/getrandomchat_dialogflow_v2', getrandomchatv2);
 app.use('/poke', poke);
 app.use('/resetmaxchats', resetMaxChats);
 
@@ -91,8 +93,9 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
   // render the error page
+  console.log('Error page.  The error: ')
+  console.log(err);
   res.status(err.status || 500);
   res.render('error');
 });
