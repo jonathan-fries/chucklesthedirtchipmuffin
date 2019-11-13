@@ -24,9 +24,10 @@ router.get('/:id*?', function(req, res, next) {
       chatId  = getRandomIntInclusive(1, global.maxChat);
     }
 
-    randomNumber = getRandomIntInclusive(1, 21);
+    randomNumber = getRandomIntInclusive(1, 26);
 
     console.log("Chat ID = " + chatId);
+    console.log("Image Number = " + randomNumber);
 
     var query = ds.createQuery(['ChucklesQuotes'])
         .filter('ListNumber', '=', parseInt(chatId))
@@ -44,6 +45,7 @@ router.get('/:id*?', function(req, res, next) {
 
               console.log("We got something back.  Sweet!");
               console.log("Quote = " + entities[0].QuoteText);
+
 
               res.render('chuckleschat', {
                   title: 'Chuckles Chat',
