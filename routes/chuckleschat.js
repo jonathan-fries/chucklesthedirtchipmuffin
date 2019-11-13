@@ -24,7 +24,7 @@ router.get('/:id*?', function(req, res, next) {
       chatId  = getRandomIntInclusive(1, global.maxChat);
     }
 
-    randomNumber = getRandomIntInclusive(1, 26);
+    randomNumber = getRandomIntInclusive(1, 32);
 
     console.log("Chat ID = " + chatId);
     console.log("Image Number = " + randomNumber);
