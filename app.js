@@ -20,6 +20,7 @@ var GetRandomChat = require('./routes/GetRandomChat');
 var getrandomchatv2 = require('./routes/GetRandomChatv2');
 var poke = require('./routes/poke');
 var resetMaxChats = require('./routes/resetMaxChats');
+var getRandomNumberStat = require('./routes/getRandomNumberStat');
 
 
 global.poke = false;
@@ -79,6 +80,7 @@ app.use('/getrandomchat', GetRandomChat);
 app.use('/getrandomchat_dialogflow_v2', getrandomchatv2);
 app.use('/poke', poke);
 app.use('/resetmaxchats', resetMaxChats);
+app.use('/getRandomNumberStat', getRandomNumberStat);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
