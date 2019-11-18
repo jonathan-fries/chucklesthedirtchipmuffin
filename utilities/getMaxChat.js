@@ -30,7 +30,7 @@ module.exports = {
         else {
             console.log('Failed to get maxChat from storage.');
             err = 'Failed to get maxChat from storage.';
-            global.maxChat = 839;
+            global.maxChat = 1258;
         }
 
         callback();
