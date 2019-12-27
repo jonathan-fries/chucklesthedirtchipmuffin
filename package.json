@@ -17,7 +17,7 @@
     "express-handlebars": "^3.1.0",
     "extend": ">=3.0.2",
     "fresh": ">=0.5.2",
-    "handlebars": ">=4.0.14",
+    "handlebars": ">=4.3.0",
     "hbs": "^4.0.4",
     "less-middleware": "~2.2.0",
     "lodash": ">=4.17.13",
