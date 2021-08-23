@@ -1,10 +1,10 @@
 
-const Datastore = require('@google-cloud/datastore');
+const {Datastore} = require('@google-cloud/datastore');
 
 //const config = require('../config');
 
 // Instantiates a client
-const ds = Datastore(
+const ds = new Datastore(
     //{projectId: config.get('GCLOUD_PROJECT')}
     {projectId: 'chucklesthedirtchipmuffin'}
 );

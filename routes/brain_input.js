@@ -5,7 +5,7 @@
 
 var express = require('express');
 var router = express.Router();
-const Datastore = require('@google-cloud/datastore');
+const {Datastore} = require('@google-cloud/datastore');
 const kind = 'ChucklesQuotes';
 
 
@@ -16,7 +16,7 @@ router.use(bodyParser.json());
 //const config = require('../config');
 
 // Instantiates a client
-const ds = Datastore(
+const ds = new Datastore(
     //{projectId: config.get('GCLOUD_PROJECT')}
     {projectId: 'chucklesthedirtchipmuffin'}
 );

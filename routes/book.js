@@ -5,10 +5,10 @@
 var express = require('express');
 var router = express.Router();
 
-const Datastore = require('@google-cloud/datastore');
+const {Datastore} = require('@google-cloud/datastore');
 
 // Instantiates a client
-const ds = Datastore(
+const ds = new Datastore(
     {projectId: 'chucklesthedirtchipmuffin'}
 );
 
