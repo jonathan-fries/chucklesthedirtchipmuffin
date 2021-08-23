@@ -19,7 +19,7 @@
     "fresh": ">=0.5.2",
     "handlebars": "^4.7.7",
     "hbs": "^4.1.2",
-    "less-middleware": "~2.2.0",
+    "less-middleware": "^3.1.0",
     "lodash": "^4.17.21",
     "morgan": ">=1.9.1",
     "node.extend": ">=2.0.1",
@@ -30,7 +30,7 @@
     "stringstream": ">=0.0.6"
   },
   "devDependencies": {
-    "mocha": "^5.1.1",
+    "mocha": "^9.1.0",
     "nyc": "^15.1.0",
     "really-need": "^1.9.2",
     "supertest": "^3.1.0"
