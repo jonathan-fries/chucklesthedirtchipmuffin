@@ -1,6 +1,6 @@
 {
   "name": "chucklesthedirtchipmuffin.com",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "start": "set GOOGLE_APPLICATION_CREDENTIALS=ChucklesTheDirtChipMuffin-8d8ef031ee52.json&& node ./bin/www",
