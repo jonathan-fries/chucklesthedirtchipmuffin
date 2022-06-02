@@ -23,7 +23,7 @@
     "lodash": "^4.17.21",
     "morgan": ">=1.9.1",
     "node.extend": ">=2.0.1",
-    "protobufjs": ">=5.0.3",
+    "protobufjs": ">=6.11.3",
     "request": "^2.88.0",
     "serve-favicon": "^2.5.0",
     "sshpk": ">=1.13.2",
